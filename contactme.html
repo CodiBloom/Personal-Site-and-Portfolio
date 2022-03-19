@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat+Alternates&family=Sacramento&display=swap" rel="stylesheet">
+    <title>Contacts</title>
+  </head>
+  <body>
+    <h1>Contacts</h1>
+    <hr />
+    <div class="contacts-container">
+      <span class="contacts"><p><strong>Email: </strong><a class="dark-link" href="mailto:codibloom@gmail.com">codibloom@gmail.com</a></p></span>
+      <span class="contacts"><p><strong>Phone: </strong><a class="dark-link" href="tel:+359877443462">+359 877 443 462</a></p></span>
+      <div class="contacts"><img class="contact-icon" src="images/linkedin24.png" alt="LinkedIn icon"><a href="https://www.linkedin.com/in/CodiBloom" target="_blank">LinkedIn</a></div>
+      <div class="contacts"><img class="contact-icon" src="images/github24.png" alt="Github icon"><a href="https://www.github.com/CodiBloom" target="_blank">Github</a></div>
+    </div>
+    <hr />
+    <div class="email-form-container">
+      <div>
+        <p class="contacts">If you'd rather that I reach out to you, leave your info below and I'll get back to you as soon as I get a chance.</p>
+      </div>
+      <main class="form-signup">
+        <form class="contacts-small" action="/contactme.html" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" name="firstName" placeholder="First Name" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+          </div>
+          <small class="form-text text-muted">Your information is not shared with anyone else.</small>
+          <button class="w-100 btn" type="submit">Submit</button>
+        </form>
+      </main>
+    </div>
+
+    <div class="bottom-container homepage-link-container">
+      <a class="footer-link" href="/index.html">Back to homepage.</a>
+    </div>
+  </body>
+</html>
