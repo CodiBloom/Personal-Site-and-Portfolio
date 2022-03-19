@@ -57,6 +57,7 @@ hr {
 
 .middle-container {
   max-width: 100%;
+  margin: 0 0 5%;
 }
 
 .bottom-container {
@@ -105,7 +106,6 @@ hr {
 }
 
 .copyright {
-  margin: 1% 0 0;
   color: #000000;
 }
 
@@ -168,13 +168,6 @@ hr {
   color: #66BFBF;
 }
 
-.homepage-link-container {
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  z-index: -1;
-}
-
 .contacts-small {
   font-family: "Montserrat Alternates", sans-serif;
 }
@@ -222,4 +215,31 @@ hr {
 .row {
   margin-left: 0;
   margin-right: 0;
+}
+
+.counter {
+  float: right;
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+.bg-primary {
+  background-color: #66BFBF !important;
+}
+
+.navbar-toggler {
+  margin: 0 2%;
+}
+
+.nav-item {
+  margin: 0 2%;
+}
+
+.navbar {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #000;
+}
+
+.dropdown-menu {
+  background-color: #2B2B2B;
 }
