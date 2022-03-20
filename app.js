@@ -11,7 +11,8 @@ let options = {
   "hostname":"us14.api.mailchimp.com",
   "path": "/3.0/lists/3acc4eb093/members",
   "headers": {
-    },
+    "Authorization": "Bearer",
+    "Cookie": "},
   "maxRedirects": 20
 };
 
