@@ -11,9 +11,7 @@ let options = {
   "hostname":"us14.api.mailchimp.com",
   "path": "/3.0/lists/3acc4eb093/members",
   "headers": {
-    "Authorization": "Bearer 508a2aff7cccafd7a0bc6d293c80097e-us14",
-    "Cookie": "ak_bmsc=1BA620655D9F899F14EA24002C306C4E~000000000000000000000000000000~YAAQv3EGF8wT2dR+AQAARI+h3g6qy+z1cPGQgWLcNxTkLRnpXPE3jUCs8rdoHY1c1ExSy09vAUL26HBOCRgt2lM9y+4Jqgz4Tk5xbYBs+5Stf5LD33vmhuoCTWmEHb8sADiIAVU77rtLtrIeXqics32velWTk55nsDOm77v8cG/EoE3mA+Jap2LvhODkozBSVz2fznkiQRbdHpIkbBHRlKEtGFcnE2NynFSUPXOexH/L0ZoMDmfIfmht3CW8JaqeFN+eFx07SP0P+nHpaUfHdUXf3/ycB6OF88H63bikRAIG0ExFavVaRdYhXM8VU6Af0gDC86X3Jq9oGfHKI1R6X67/yAj4fcVest7LTU75avjm/uYcM/dM/pvrmHU2Kvw3NarcNw==; bm_sv=001F430B7DD23725EB2FBD2FE3DAA37B~vvYZA/1OqAiV86mSxjLwF2rksmtKriSRHy+g1/BW52FjfoFRDZ53TIrHFzR4QrOenQbPiDE0mVCl7Ef5RCCBGnKa5R4X0U12WdAp2sr24SYGGa3eP+GN+cQFn3II+acfu2YDP1QknoaWzS1hkr2T3v/gwRSr+Fb8go0f+rvNZJ8="
-  },
+    },
   "maxRedirects": 20
 };
 
