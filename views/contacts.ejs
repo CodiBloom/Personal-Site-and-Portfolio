@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat+Alternates&family=Sacramento&display=swap" rel="stylesheet">
+    <title>Contacts</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/CodiBloom" target="_blank"><img class="contact-icon" src="images/linkedin24.png" alt="LinkedIn icon"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.github.com/CodiBloom" target="_blank"><img class="contact-icon" src="images/github24.png" alt="Github icon"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Homepage</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+            <ul class="dropdown-menu text-center" aria-labelledby="navbarScrollingDropdown">
+              <li><a href="/SimonGame/index.html">Simon Says</a></li>
+              <li><a href="/DiceGame/dice.html">Dice Game</a></li>
+              <li><a href="/Drumkit/index.html">Drumkit</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1>Contacts</h1>
+    <hr />
+    <div class="contacts-container">
+      <span class="contacts"><p><strong>Email: </strong><a class="dark-link" href="mailto:codibloom@gmail.com">codibloom@gmail.com</a></p></span>
+      <span class="contacts"><p><strong>Phone: </strong><a class="dark-link" href="tel:+359877443462">+359 877 443 462</a></p></span>
+    </div>
+    <hr />
+    <div class="email-form-container">
+      <div class="form-response contacts-small">
+      <% if (formStatus === "incomplete"){ %>
+        <div>
+          <p class="contacts">If you'd rather that I reach out to you, leave your info below and I'll get back to you as soon as I get a chance.</p>
+        </div>
+        <main class="form-signup">
+          <form action="/contactme.html" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" name="firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" name="phone" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" placeholder="Phone">
+            </div>
+            <div class="form-group">
+              <textarea type="text" class="form-control" name="message" maxlength="255" rows="3" placeholder="Leave a message here so I know what your inquiry is about. 255 characters max."></textarea>
+              <div id="counter">
+                <span id="current">0</span>
+                <span id="maximum">/ 300</span>
+              </div>
+            </div>
+            <small class="form-text text-muted">Your information is not shared with anyone else.</small>
+            <button class="w-100 btn" type="submit">Send</button>
+          </form>
+        </main>
+      <% } else if (formStatus === "filling"){ %>
+        <main class="form-signup">
+          <p>Please verify the below is correct before sending.</p>
+          <form action="/contactme.html" method="post">
+            <div class="form-group">
+              <p><strong>Name:</strong> <%= firstName %> <%= lastName %></p>
+              <input type="hidden" name="firstName" value=<%= firstName %> required>
+            </div>
+            <div class="form-group">
+              <input type="hidden" name="lastName" value=<%= lastName %> required>
+            </div>
+            <div class="form-group">
+              <p><strong>Email:</strong> <%= email %></p>
+              <input type="hidden"  name="email" value=<%= email %> required>
+            </div>
+            <% if (phone !== "Nothing"){ %>
+              <div class="form-group">
+                <p><strong>Phone:</strong> <%= phone %></p>
+                <input type="hidden" name="phone" value=<%= phone %>>
+              </div>
+            <% } %>
+            <% if (message !== "Nothing"){ %>
+              <div class="form-group">
+                <p><strong>Message:</strong> <%= message %></p>
+                <input type="hidden" name="message" value=<%= message %>>
+              </div>
+            <% } %>
+
+            <button class="w-100 btn" type="submit">Send</button>
+          </form>
+        </main>
+      <% } else if (formStatus === "complete"){ %>
+        <p class="contacts"><%= submit %></p>
+      <% } %>
+    </div>
+    </div>
+
+    <div class="bottom-container">
+      <a class="footer-link" href="/index.html">Back to homepage.</a>
+    </div>
+  </body>
+
+  <footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </footer>
+</html>
